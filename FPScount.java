@@ -1,4 +1,4 @@
-public class FPScount
+public class FPScount extends Engine
 {
     
     private static boolean status = false;
