@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Engine
 comment1.params=
@@ -5,3 +6,12 @@ comment1.target=void\ main()
 comment2.params=
 comment2.target=void\ loop()
 numComments=3
+=======
+#BlueJ class context
+comment0.target=Engine
+comment1.params=
+comment1.target=void\ main()
+comment2.params=
+comment2.target=void\ loop()
+numComments=3
+>>>>>>> 32e29843288c13a1cb967645bd17b7c92c70eea0

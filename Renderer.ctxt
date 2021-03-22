@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Renderer
 comment1.params=
@@ -7,3 +8,14 @@ comment2.target=void\ OLDrender(RawModel)
 comment3.params=model
 comment3.target=void\ BiVAOrender(RawModel)
 numComments=4
+=======
+#BlueJ class context
+comment0.target=Renderer
+comment1.params=
+comment1.target=void\ prepare()
+comment2.params=model
+comment2.target=void\ OLDrender(RawModel)
+comment3.params=model
+comment3.target=void\ BiVAOrender(RawModel)
+numComments=4
+>>>>>>> 32e29843288c13a1cb967645bd17b7c92c70eea0
