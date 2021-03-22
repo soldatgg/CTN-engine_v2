@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=RawModel
-comment1.params=vaoID\ vertexCount
-comment1.target=RawModel(int,\ int)
-comment2.params=
-comment2.target=int\ getVaoId()
-comment3.params=
-comment3.target=int\ getVertexCount()
-numComments=4
