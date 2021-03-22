@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=LOG
+comment1.params=value
+comment1.target=void\ render(java.lang.String)
+comment10.params=value
+comment10.target=void\ error(java.lang.String)
+comment11.params=value
+comment11.target=void\ FATAL(java.lang.String)
+comment12.params=value
+comment12.target=void\ debug(java.lang.String)
+comment2.params=value
+comment2.target=void\ loader(java.lang.String)
+comment3.params=value
+comment3.target=void\ model(java.lang.String)
+comment4.params=value
+comment4.target=void\ get(java.lang.String)
+comment5.params=value
+comment5.target=void\ printfloat(float)
+comment6.params=value
+comment6.target=void\ printVersion(java.lang.String)
+comment7.params=value
+comment7.target=void\ printFPS(long)
+comment8.params=value
+comment8.target=void\ println(java.lang.String)
+comment9.params=value
+comment9.target=void\ print(java.lang.String)
+numComments=13
