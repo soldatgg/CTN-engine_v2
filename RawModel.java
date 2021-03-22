@@ -5,8 +5,6 @@ public class RawModel
     private static int vaoID;
     private int vertexCount;
     
-    private boolean test1 = false;
-    
     public RawModel(int vaoID, int vertexCount)
     {
         this.vaoID = vaoID;

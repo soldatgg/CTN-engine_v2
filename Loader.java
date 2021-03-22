@@ -95,7 +95,7 @@ public class Loader
     private FloatBuffer storeDataInFloatBuffer(float[] data)
     {
         LOG.debug("call Loader.storeDataInBuffer ^^");
-        LOG.print("OH GOD THAT WORK");
+        LOG.println("OH GOD THAT WORK");
         FloatBuffer buffer = BufferUtils.createFloatBuffer(data.length);
         buffer.put(data);
         buffer.flip();

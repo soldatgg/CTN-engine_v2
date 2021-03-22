@@ -12,12 +12,23 @@ public class Renderer
         
     }
     
-    public void render(RawModel model)
+    public void OLDrender(RawModel model)
     {
-        //LOG.render("Rendering a new frame !! (old render method)");
+        LOG.render("Rendering a new frame !! (old render method)");
         GL30.glBindVertexArray(RawModel.getVaoId());
         GL20.glEnableVertexAttribArray(0);
-        GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, model.getVertexCount());//Falure here
+        GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, model.getVertexCount());
+        GL20.glDisableVertexAttribArray(0);
+        GL30.glBindVertexArray(0);
+        
+    }
+    
+    public void BiVAOrender(RawModel model)
+    {
+        LOG.render("Rendering a new frame !! (NEW render method)");
+        GL30.glBindVertexArray(RawModel.getVaoId());
+        GL20.glEnableVertexAttribArray(0);
+        GL11.glDrawElements(GL11.GL_TRIANGLES, model.getVertexCount(), GL11.GL_UNSIGNED_INT, 0);//Falure here
         GL20.glDisableVertexAttribArray(0);
         GL30.glBindVertexArray(0);
         

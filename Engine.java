@@ -46,7 +46,7 @@ public class Engine
         LOG.println("Version of LWJGL :");
         LOG.println(Version.getVersion());
         
-        init_window(800, 460, "CTN-engine", true, true, true);
+        EngineManager.init_window(1280, 720, "CTN-engine", true, true, true);
         
             MemoryStack stack = stackPush();
             IntBuffer pWidth = stack.mallocInt(1); // int*
@@ -69,29 +69,6 @@ public class Engine
         glfwSwapInterval(1);
         
         glfwShowWindow(window);
-        
-    }
-    
-    public static void init_window(int Large ,int High ,String name ,boolean v1 ,boolean v2, boolean v3)
-    {
-        LOG.println("Initialaise a new window");
-        
-        if(v1)
-        glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
-        if(v2)
-        glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
-        
-        window = glfwCreateWindow(Large, High, name, NULL, NULL);
-        if( window == NULL )
-        {
-            LOG.FATAL("GLFW can't create the window");
-        }
-        
-        if(v3){
-            glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
-            if ( key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE )
-                glfwSetWindowShouldClose(window, true);});
-        }
         
     }
     
@@ -126,7 +103,7 @@ public class Engine
             
             renderer.prepare();
             
-            renderer.render(model);
+            renderer.OLDrender(model);
             
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
 

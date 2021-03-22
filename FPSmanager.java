@@ -26,26 +26,6 @@ public class FPSmanager
         if(Show_debug)
         LOG.debug("The calcul function is call");
         
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        LOG.println(" ");
-        
         FPScount.time = FPScount.time_2 - FPScount.time_1;
         
         if(FPScount.time == 0){

@@ -11,7 +11,7 @@
 public class main
 {
     
-    public void main()
+    public static void main()
     {
         Engine.main();
         
