@@ -14,11 +14,11 @@ import static org.lwjgl.system.MemoryUtil.*;
 public class EngineManager extends Engine {
 
     
-    
+    /*s
     public boolean OOF_status = true;
     public long FPS = 0;
     public boolean showFps = true;
-    
+    */
     
     
 /*
