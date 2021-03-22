@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Renderer
+comment1.params=
+comment1.target=void\ prepare()
+comment2.params=model
+comment2.target=void\ render(RawModel)
+numComments=3
