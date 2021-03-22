@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Engine
-comment1.params=
-comment1.target=void\ main()
-comment2.params=Large\ High\ name\ v1\ v2\ v3
-comment2.target=void\ init_window(int,\ int,\ java.lang.String,\ boolean,\ boolean,\ boolean)
-comment3.params=
-comment3.target=void\ loop()
-numComments=4
