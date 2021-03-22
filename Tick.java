@@ -36,12 +36,6 @@ public class Tick
     
     public static void main()
     {
-        if(Show_debug){
-        LOG.debug("An action is call on the Tick counter");
-        LOG.debug("call Tick.main");
-        }
-        
-        
         
         
     }

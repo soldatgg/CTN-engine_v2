@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=windowManager
+comment1.params=Large\ High\ name\ v1\ v2\ v3
+comment1.target=void\ initWindow(int,\ int,\ java.lang.String,\ boolean,\ boolean,\ boolean)
+comment2.params=
+comment2.target=void\ createWindow()
+numComments=3

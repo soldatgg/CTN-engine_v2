@@ -46,7 +46,7 @@ public class Engine
         LOG.println("Version of LWJGL :");
         LOG.println(Version.getVersion());
         
-        EngineManager.init_window(1280, 720, "CTN-engine", true, true, true);
+        windowManager.initWindow(1280, 720, "CTN-engine", true, true, true);
         
             MemoryStack stack = stackPush();
             IntBuffer pWidth = stack.mallocInt(1); // int*

@@ -35,7 +35,7 @@ public class FPScount
             LOG.debug("An action is call in the counter");
             
             Tick.main();
-            
+            constantTick.main();
             
             Counter++;
             
