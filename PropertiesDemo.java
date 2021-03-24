@@ -1,3 +1,4 @@
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -58,11 +59,11 @@ public class PropertiesDemo {
         out.close();
         
     }
-
+    
     public PropertiesDemo() {
         super();
     }
-
+    
     
     /**
      * Cette méthode stocke le fichier Properties à l'emplacement spécifié
@@ -80,8 +81,8 @@ public class PropertiesDemo {
         out.flush();
         out.close();
     }
-
-
+    
+    
     public Properties loadProperties(String propertiesFileLocation) throws FileNotFoundException, IOException {
         Properties props = new Properties();
         props.load(new FileInputStream(propertiesFileLocation));
@@ -122,7 +123,7 @@ public class PropertiesDemo {
         }
         
         //On y insère des paires [clé,valeur]
-        /*
+        
         myProps.setProperty("user.name","HackTrack");
         myProps.setProperty("os.name","Linux");
         myProps.setProperty("java.ide","Eclipse3.2");
@@ -144,6 +145,6 @@ public class PropertiesDemo {
             } catch (IOException e) {
             e.printStackTrace();
             }
-            */
+            
     }
 }

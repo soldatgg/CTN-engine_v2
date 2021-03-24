@@ -25,9 +25,9 @@ public class windowManager extends Engine
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
         
         window = glfwCreateWindow(Large, High, name, NULL, NULL);
-        if( window == NULL )
-        {
+        if( window == NULL ){
             LOG.FATAL("GLFW can't create the window");
+            
         }
         
         if(v3){

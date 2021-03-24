@@ -24,6 +24,7 @@ public class FPScount extends Engine
     {
         LOG.debug("Starting the FPS_count part of the engine");
         
+        
         status = true;
         
     }
