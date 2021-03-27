@@ -19,9 +19,10 @@ public class Engine
 {
     
     public static long window;
-    private static boolean vSync = false;
+    private static boolean vSync = true;
     public static boolean OOF_status = true;
     private static boolean DFwindowGLFW = true;
+    private static int VsyncFPSLimiterDivider  = 1 ;
     
     public static void main()
     {
@@ -66,7 +67,7 @@ public class Engine
         glfwMakeContextCurrent(window);
         
         if(vSync)
-        glfwSwapInterval(1);
+        glfwSwapInterval(VsyncFPSLimiterDivider);
         
         glfwShowWindow(window);
         
@@ -80,15 +81,21 @@ public class Engine
         GL.createCapabilities();
 
         // Set the clear color
-        glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
+        //glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+        //old engine loop part not need anymore in nopw on the erepare render
+        //part of the engine
         
         Loader loader = new Loader();
         Renderer renderer = new Renderer();
         
+        //3d model
         float[] vertices = {
         -0.5f, 0.5f, 0f,
         -0.5f, -0.5f, 0f,
-        0.5f, -0.5f, 0f
+        0.5f, -0.5f, 0f,
+        0.5f, -0.5f, 0f,
+        0.5f, 0.5f, 0f,
+        -0.5f, 0.5f, 0f
         };
         
         int[] indices = {
@@ -106,6 +113,8 @@ public class Engine
             renderer.OLDrender(model);
             
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+            
+            //acctivate it if you want to not display an image /\
 
             glfwSwapBuffers(window); // swap the color buffers
 
@@ -113,8 +122,9 @@ public class Engine
             // invoked during this call.
             glfwPollEvents();
             }
+            LOG.println("End of the main Engine loop");
         
-        loader.cleanUP();
+        loader.cleanUP();//problem on the cleanup of the vbos
         
     }
     

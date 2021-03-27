@@ -135,7 +135,7 @@ public class PropertiesDemo {
         
         try {
             //On stocke le fichier sur le disque
-            demo.saveProperties(myProps, propertiesFileLocation, "This is a demo on Properties by HackTrack");
+            demo.saveProperties(myProps, iupropertiesFileLocation, "This is a demo on Properties by HackTrack");
             //On crée un nouvel objet Properties en lisant le fichier sur le disque
             Properties loadedProps = demo.loadProperties(propertiesFileLocation);
             //On affiche le contenu du fichier
