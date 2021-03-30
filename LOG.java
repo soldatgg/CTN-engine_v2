@@ -5,6 +5,20 @@ public class LOG
     private static boolean debug = false;
     private static boolean debugGet = false;
     
+    public static void engine(String value)
+    {
+        System.out.print("#Engine ");
+        System.out.println(value);
+        
+    }
+    
+    public static void CleanUP(String value, int v)
+    {
+        System.out.print(value);
+        System.out.println(v);
+        
+    }
+    
     public static void render(String value)
     {
         System.out.print("#Render ");
@@ -14,7 +28,7 @@ public class LOG
     
     public static void loader(String value)
     {
-        System.out.print("#loader ");
+        System.out.print("#Loader ");
         System.out.println(value);
         
     }

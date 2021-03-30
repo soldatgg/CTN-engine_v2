@@ -1,13 +1,4 @@
 
-/**
- * Write a description of class main here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-
-
-
 public class main
 {
     
@@ -16,6 +7,8 @@ public class main
         Engine.main();
         
         Engine.loop();
+        
+        LOG.FATAL("CTN-Engine have been stoped corectely , exit code 01");
         
     }
     

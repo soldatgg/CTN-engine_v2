@@ -1,6 +1,4 @@
 
-
-
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL15;
@@ -10,8 +8,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
-
-
 
 public class Loader
 {
@@ -31,13 +27,18 @@ public class Loader
     
     public void cleanUP()
     {
+        LOG.loader("Try to clean up the Engine");
         for(int vao:vaos){
+            LOG.CleanUP("#Loader CleanUp the VAO number : ", vao);
             GL30.glDeleteVertexArrays(vao);
         }
         
-        /*for(int vao:vbos){
+        for(int vbo:vbos){
+            LOG.CleanUP("#Loader CleanUp the VBO number : ", vbo);
             GL15.glDeleteBuffers(vbo);
-        }*/
+        }
+        
+        LOG.loader("Engine CleanUP is finish");
         
     }
     

@@ -122,7 +122,7 @@ public class Engine
             // invoked during this call.
             glfwPollEvents();
             }
-            LOG.println("End of the main Engine loop");
+            LOG.engine("End of the main Engine loop");
         
         loader.cleanUP();//problem on the cleanup of the vbos
         
