@@ -1,3 +1,6 @@
+
+//no improt need
+
 public class FPScount extends Engine
 {
     
@@ -11,20 +14,10 @@ public class FPScount extends Engine
     public static long time;
     public static long FPS;
     
-    public static void main()
-    {
-        //if(FPScount.Show_debug)
-        //LOG.debug("call FPScount.main");
-        
-        //Tick.main();
-        
-    }
     
     public static void start()
     {
         LOG.debug("Starting the FPS_count part of the engine");
-        
-        
         status = true;
         
     }

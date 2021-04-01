@@ -27,7 +27,6 @@ public class Engine
     public static void main()
     {
         LOG.debug("call Engine.main");
-        
         if(!OOF_status)
         LOG.FATAL("OOF That hurts");
         
@@ -87,6 +86,7 @@ public class Engine
         
         Loader loader = new Loader();
         Renderer renderer = new Renderer();
+        FPScount fpscount = new FPScount();
         
         //3d model
         float[] vertices = {
@@ -113,7 +113,6 @@ public class Engine
             renderer.OLDrender(model);
             
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
-            
             //acctivate it if you want to not display an image /\
 
             glfwSwapBuffers(window); // swap the color buffers
@@ -125,6 +124,7 @@ public class Engine
             LOG.engine("End of the main Engine loop");
         
         loader.cleanUP();//problem on the cleanup of the vbos
+        LOG.FATAL("CTN-engine have been stop corectely, Exit code 01");
         
     }
     
