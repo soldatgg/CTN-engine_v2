@@ -4,6 +4,7 @@ public class LOG
     
     private static boolean debug = false;
     private static boolean debugGet = false;
+    private static long value2 = 0;
     
     public static void engine(String value)
     {
@@ -62,9 +63,19 @@ public class LOG
         
     }
     
-    public static void printFPS(long value)
+    public static void printLong(long value)
     {
         System.out.println(value);
+        
+    }
+    
+    public static void printFPS(long value)
+    {
+        System.out.print(value);
+        System.out.println("Ns");
+        value2 = value / 1000000;
+        System.out.print(value2);
+        System.out.println("Ms");
         
     }
     

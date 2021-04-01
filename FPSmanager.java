@@ -33,17 +33,17 @@ public class FPSmanager
             }
         
         if(FPScount.time != 0){
-        FPScount.FPS = 1000 / FPScount.time;
+        FPScount.FPS = 1000000000 / FPScount.time;
             }
         
         if(Show_counter){
             LOG.print("Frame number : ");
-            LOG.printFPS(FPScount.Counter);
+            LOG.printLong(FPScount.Counter);
             }
         
         if(Show_FPS){
             LOG.print("FPS : ");
-            LOG.printFPS(FPScount.FPS);
+            LOG.printLong(FPScount.FPS);
             }
             
         if(Show_ping){

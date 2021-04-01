@@ -38,7 +38,7 @@ public class FPScount extends Engine
                 LOG.debug("if1 is call");
                 
                 Tick.engineTick();
-                time_1 = System.currentTimeMillis();
+                time_1 = System.nanoTime();
                 statusFPSCOUNT = true;
                 
                 }
@@ -47,7 +47,7 @@ public class FPScount extends Engine
                 if(FPSmanager.Show_debug)
                 LOG.debug("if2 is call");
                 
-                time_2 = System.currentTimeMillis();
+                time_2 = System.nanoTime();
                 statusFPSCOUNT = false;
                 
                 FPSmanager.calcul();
