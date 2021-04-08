@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=StaticShader
+comment1.params=
+comment1.target=StaticShader()
+comment2.params=
+comment2.target=void\ bindAttributes()
+numComments=3

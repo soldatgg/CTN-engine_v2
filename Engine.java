@@ -88,6 +88,8 @@ public class Engine
         Renderer renderer = new Renderer();
         FPScount fpscount = new FPScount();
         
+        StaticShader shader = new StaticShader();
+        
         //3d model
         float[] vertices = {
         -0.5f, 0.5f, 0f,
@@ -95,7 +97,7 @@ public class Engine
         0.5f, -0.5f, 0f,
         0.5f, -0.5f, 0f,
         0.5f, 0.5f, 0f,
-        -0.5f, -0.5f, 0f
+        -0.5f, 0.5f, 0f
         };
         
         int[] indices = {
@@ -110,9 +112,12 @@ public class Engine
             FPScount.action();
             
             renderer.prepare();
+            shader.start();
             
             renderer.OLDrender(model);
             //renderer.BiVAOrender(model);
+            
+            shader.stop();
             
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
             //acctivate it if you want to not display an image /\
@@ -123,8 +128,10 @@ public class Engine
             // invoked during this call.
             glfwPollEvents();
             }
+        
             LOG.engine("End of the main Engine loop");
         
+        shader.cleanUp();
         loader.cleanUP();//problem on the cleanup of the vbos
         LOG.FATAL("CTN-engine have been stop corectely, Exit code 01");
         

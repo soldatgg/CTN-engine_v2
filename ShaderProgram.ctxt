@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ShaderProgram
+comment1.params=vertexFile\ fragmentFile
+comment1.target=ShaderProgram(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=void\ start()
+comment3.params=
+comment3.target=void\ stop()
+comment4.params=
+comment4.target=void\ cleanUp()
+comment5.params=
+comment5.target=void\ bindAttributes()
+comment6.params=attribute\ variableName
+comment6.target=void\ bindAttribute(int,\ java.lang.String)
+comment7.params=file\ type
+comment7.target=int\ loadShader(java.lang.String,\ int)
+numComments=8
