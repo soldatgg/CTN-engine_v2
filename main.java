@@ -5,14 +5,6 @@ public class main
     public static void main()
     {
         
-        FPScount.start();
-        
-        FPScount.action();
-        
-        FPScount.action();
-        
-        LOG.FATAL("End Of The Test");
-        
         Engine.main();
         
         Engine.loop();

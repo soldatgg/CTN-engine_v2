@@ -95,11 +95,12 @@ public class Engine
         0.5f, -0.5f, 0f,
         0.5f, -0.5f, 0f,
         0.5f, 0.5f, 0f,
-        -0.5f, 0.5f, 0f
+        -0.5f, -0.5f, 0f
         };
         
         int[] indices = {
-            0,1,3,3,1,2};
+            0,1,3,
+            3,1,2};
         
         RawModel model = loader.loadToVAO(vertices, indices);
 
@@ -111,6 +112,7 @@ public class Engine
             renderer.prepare();
             
             renderer.OLDrender(model);
+            //renderer.BiVAOrender(model);
             
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
             //acctivate it if you want to not display an image /\
