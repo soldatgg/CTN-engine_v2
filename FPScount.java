@@ -12,7 +12,9 @@ public class FPScount extends Engine
     public static long time_1;
     public static long time_2;
     public static long time;
+    public static long midtime;
     public static long FPS;
+    public static long midFPS;
     
     
     public static void start()
@@ -40,6 +42,8 @@ public class FPScount extends Engine
                 Tick.engineTick();
                 time_1 = System.nanoTime();
                 statusFPSCOUNT = true;
+                
+                FPSmanager.calcul2();
                 
                 }
             

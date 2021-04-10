@@ -4,7 +4,7 @@ public class FPSmanager
     
     private static boolean Show_counter = true;
     private static boolean Show_FPS = true;
-    private static boolean Show_ping = true;
+    private static boolean Show_ping = false;
     public static boolean Show_debug = false;
     
     public static int ErrorFrameCount = 0;
@@ -43,6 +43,34 @@ public class FPSmanager
         if(Show_ping){
             LOG.print("Ping : ");
             LOG.printFPS(FPScount.time);
+            }
+        
+    }
+    
+    public static void calcul2()
+    {
+        if(Show_debug)
+        LOG.debug("The calcul function is call");
+        
+        FPScount.midtime = FPScount.time_1 - FPScount.time_2;
+        
+        if(FPScount.time != 0){
+        FPScount.midFPS = 1000000000 / FPScount.midtime;
+            }
+        
+        if(Show_counter){
+            LOG.print("Frame number : ");
+            LOG.printLong(FPScount.Counter);
+            }
+        
+        if(Show_FPS){
+            LOG.print("FPS : ");
+            LOG.printLong(FPScount.midFPS);
+            }
+            
+        if(Show_ping){
+            LOG.print("Ping : ");
+            LOG.printFPS(FPScount.midtime);
             }
         
     }

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.io.FileInputStream;
 
 public class Loader
 {
@@ -24,7 +25,14 @@ public class Loader
         return new RawModel(vaoID,indices.length);
         
     }
-    
+    /*
+    public int loadTexture(String fileName)
+    {
+        Texture texture = null;
+        texture = TextureLoader.getTexture("PNG" ,new FileInputStream("res/"+fileName+".png"));
+        
+    }
+    */
     public void cleanUP()
     {
         LOG.loader("Try to clean up the Engine");
