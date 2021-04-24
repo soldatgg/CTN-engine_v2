@@ -6,6 +6,13 @@ public class LOG
     private static boolean debugGet = false;
     private static long value2 = 0;
     
+    public static void Buffer(long value)
+    {
+        System.out.println("#Engine Window buffer :");
+        System.out.println(value);
+        
+    }
+    
     public static void engine(String value)
     {
         System.out.print("#Engine ");
@@ -65,7 +72,7 @@ public class LOG
     
     public static void printLong(long value)
     {
-        System.out.println(value);
+        System.out.print(value);
         
     }
     

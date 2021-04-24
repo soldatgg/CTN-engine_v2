@@ -2,6 +2,7 @@
 comment0.target=Loader
 comment1.params=positions\ indices
 comment1.target=RawModel\ loadToVAO(float[],\ int[])
+comment1.text=\r\n\ \ \ \ public\ int\ loadTexture(String\ fileName)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ Texture\ texture\ \=\ null;\r\n\ \ \ \ \ \ \ \ texture\ \=\ TextureLoader.getTexture("PNG"\ ,new\ FileInputStream("res/"+fileName+".png"));\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ }\r\n
 comment2.params=
 comment2.target=void\ cleanUP()
 comment3.params=

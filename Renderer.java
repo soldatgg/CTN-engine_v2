@@ -7,6 +7,7 @@ public class Renderer
 {
     public void prepare()
     {
+        LOG.render("Prepare the rendering");
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
         GL11.glClearColor(1, 0, 0, 1);
         

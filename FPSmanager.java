@@ -36,14 +36,16 @@ public class FPSmanager
             }
         
         if(Show_FPS){
-            LOG.print("FPS : ");
+            LOG.print("   FPS : ");
             LOG.printLong(FPScount.FPS);
             }
             
         if(Show_ping){
-            LOG.print("Ping : ");
+            LOG.print("   Ping : ");
             LOG.printFPS(FPScount.time);
             }
+            
+            LOG.println(" ");
         
     }
     
@@ -64,14 +66,16 @@ public class FPSmanager
             }
         
         if(Show_FPS){
-            LOG.print("FPS : ");
+            LOG.print("   FPS : ");
             LOG.printLong(FPScount.midFPS);
             }
             
         if(Show_ping){
-            LOG.print("Ping : ");
+            LOG.print("   Ping : ");
             LOG.printFPS(FPScount.midtime);
             }
+            
+            LOG.println(" ");
         
     }
     

@@ -4,6 +4,7 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.BufferUtils;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.nio.FloatBuffer;
@@ -15,9 +16,19 @@ public class Loader
     private List<Integer> vaos = new ArrayList<Integer>();
     private List<Integer> vbos = new ArrayList<Integer>();
     
+    
+    public int loadTexture(String fileName)
+    {
+        Texture texture = null;
+        texture = TextureLoader.getTexture("PNG" ,new FileInputStream("res/"+fileName+".png"));
+        
+    }
+    
+    
     public RawModel loadToVAO(float[] positions, int[] indices)
     {
         LOG.debug("call Loader.RawModel");
+        LOG.loader("Loading the mesh");
         bindIndicesBuffer(indices);
         int vaoID = createVAO();
         storeDataInAttributeList(0, positions);
@@ -25,14 +36,7 @@ public class Loader
         return new RawModel(vaoID,indices.length);
         
     }
-    /*
-    public int loadTexture(String fileName)
-    {
-        Texture texture = null;
-        texture = TextureLoader.getTexture("PNG" ,new FileInputStream("res/"+fileName+".png"));
-        
-    }
-    */
+    
     public void cleanUP()
     {
         LOG.loader("Try to clean up the Engine");
@@ -52,7 +56,7 @@ public class Loader
     
     private int createVAO()
     {
-        LOG.debug("createVAO");
+        LOG.loader("createVAO");
         int vaoID = GL30.glGenVertexArrays();
         vaos.add(vaoID);
         GL30.glBindVertexArray(vaoID);
@@ -63,7 +67,7 @@ public class Loader
     
     private void storeDataInAttributeList(int attributeNumber, float[] data)
     {
-        LOG.debug("call Loader.storeDataInAttributeList");
+        LOG.loader("call Loader.storeDataInAttributeList");
         int vboID = GL15.glGenBuffers();
         vbos.add(vboID);
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, vboID);
@@ -76,14 +80,14 @@ public class Loader
     
     private void unbindVAO()
     {
-        LOG.println("My Friend Is A DUM");
-        LOG.println("UnBindingVAO ^^");
+        LOG.loader("unbindVAO");
         GL30.glBindVertexArray(0);
         
     }
     
     private void bindIndicesBuffer(int[] indices)
     {
+        LOG.loader("Bind Buffer (indices)");
         int vboID = GL15.glGenBuffers();
         vbos.add(vboID);
         GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboID);
@@ -94,20 +98,24 @@ public class Loader
     
     private IntBuffer storeDataInIntBuffer(int[] data)
     {
+        LOG.loader("IntBuffer Put data in the int buffer");
         IntBuffer buffer = BufferUtils.createIntBuffer(data.length);
         buffer.put(data);
         buffer.flip();
+        System.out.print("IntBuffer :");
+        System.out.println(buffer);
         return buffer;
         
     }
     
     private FloatBuffer storeDataInFloatBuffer(float[] data)
     {
-        LOG.debug("call Loader.storeDataInBuffer ^^");
-        LOG.println("OH GOD THAT WORK");
+        LOG.loader("call Loader.storeDataInBuffer");
         FloatBuffer buffer = BufferUtils.createFloatBuffer(data.length);
         buffer.put(data);
         buffer.flip();
+        System.out.print("FloatBuffer :");
+        System.out.println(buffer);
         return buffer;
         
     }

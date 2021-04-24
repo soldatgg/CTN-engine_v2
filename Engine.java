@@ -111,6 +111,8 @@ public class Engine
             LOG.debug("call Engine.loop/while");
             FPScount.action();
             
+            LOG.Buffer(window);
+            
             renderer.prepare();
             shader.start();
             
